@@ -11,28 +11,30 @@ namespace task2
             // hem ededin reqemleri daxilinde 3 olmasin
             // hem ededin reqemleri cemi 10 dan boyuk olsun
             int numbers;
-            int sum1;
-            int sum2;
+            int sum;
+            int temp;
             for (numbers = 10; numbers < 1000; numbers++)
             {
-                if (numbers < 100)
+                sum = 0;
+                temp = numbers;
+                while (temp > 0)
                 {
-                    sum1 = numbers % 10 + numbers / 10;
-                    if (numbers % 10 == numbers / 10 && numbers != 33 && sum1>10)
+                    sum = sum + (temp % 10);
+                    temp = temp / 10;
+                }
+                if (sum > 10)
+                {
+                    if (numbers < 100 && numbers % 10 == numbers / 10 && numbers != 33)
                     {
                         Console.WriteLine(numbers);
                     }
-                }
-                    if (numbers > 100)
+                    if (numbers > 100 && numbers % 10 == numbers / 100 && numbers % 10 != 3 && numbers % 100 != 3 && numbers % 100 / 10 != 3)
                     {
-                    sum2 = numbers % 10 + numbers / 10 % 10 + numbers / 100;
-                    if (numbers % 10 == numbers / 100 && numbers%10!=3 && numbers%100!=3 && numbers%100/10!=3 && sum2>10)
-                        {
-                            Console.WriteLine(numbers);
-                        }
+                        Console.WriteLine(numbers);
                     }
                 }
             }
         }
     }
+}
 
