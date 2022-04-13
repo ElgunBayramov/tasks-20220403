@@ -13,24 +13,34 @@ namespace task2
             int numbers;
             int sum;
             int temp;
+            bool state;
             for (numbers = 10; numbers < 1000; numbers++)
             {
+                state = false;
                 sum = 0;
                 temp = numbers;
                 while (temp > 0)
                 {
                     sum = sum + (temp % 10);
                     temp = temp / 10;
-                }
-                if (sum > 10)
-                {
-                    if (numbers < 100 && numbers % 10 == numbers / 10 && numbers != 33)
+                    if (temp % 10 == 3)
                     {
-                        Console.WriteLine(numbers);
+                        state = true;
+                        break;
                     }
-                    if (numbers > 100 && numbers % 10 == numbers / 100 && numbers % 10 != 3 && numbers % 100 != 3 && numbers % 100 / 10 != 3)
+                }
+                if (state == false)
+                {
+                    if (sum > 10)
                     {
-                        Console.WriteLine(numbers);
+                        if (numbers < 100 && numbers % 10 == numbers / 10)
+                        {
+                            Console.WriteLine(numbers);
+                        }
+                        if (numbers > 100 && numbers % 10 == numbers / 100)
+                        {
+                            Console.WriteLine(numbers);
+                        }
                     }
                 }
             }

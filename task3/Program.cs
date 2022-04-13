@@ -11,15 +11,20 @@ namespace task3
             // hem reqemleri cemi 5 den boyuk olsun
             // hem reqemleri arasinda 5 reqemi olmasin
             int numbers;
-            int a1;
+            int temp;
             for (int i = 10; i < 100000; i++)
             {
-            
+                temp = numbers;
+                while (numbers > 0)
+                {
+                    temp % 10 = temp / 20;
+                  
+                }
 
             }
 
         
-            }
+            
         }
     }
 }
