@@ -10,21 +10,53 @@ namespace task3
             // hem butun reqemleri eyni olsun,
             // hem reqemleri cemi 5 den boyuk olsun
             // hem reqemleri arasinda 5 reqemi olmasin
-            int numbers;
+            int num;
             int temp;
-            for (int i = 10; i < 100000; i++)
+            int sum;
+            bool state;
+            for (num = 10; num < 100000; num++)
             {
-                temp = numbers;
-                while (numbers > 0)
+                state = false;
+                sum = 0;
+                temp = num;
+                while (temp > 0)
                 {
-                    temp % 10 = temp / 20;
-                  
+                    sum = sum + temp % 10;
+                    temp /= 10;
+                    if (temp % 10 == 5)
+                    {
+                        state = true;
+                        break;
+                    }
+
                 }
-
+                if (state == false)
+                {
+                    if (sum > 5)
+                    {
+                        if (num % 10 == num / 10)
+                        {
+                            Console.WriteLine(num);
+                        }
+                        if (num % 10 == num / 100 && num % 10 == num % 100 / 10)
+                        {
+                            Console.WriteLine(num);
+                        }
+                        if (num % 10 == num / 1000 && num % 10 == num / 100 % 10 && num % 10 == num % 100 / 10)
+                        {
+                            Console.WriteLine(num);
+                        }
+                        if (num % 10 == num / 10000 && num % 10 == num / 1000 % 10 && num % 10 == num % 1000 / 100 && num % 10 == num % 1000 / 10 % 10)
+                        {
+                            Console.WriteLine(num);
+                        }
+                    }
+                }
             }
-
-        
-            
         }
     }
 }
+
+
+
+                    

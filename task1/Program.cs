@@ -24,7 +24,7 @@ namespace task1
                         temp /= 10;
                     }
                    
-                    if (sum > 5 && sum < 7 && numbers%100==0)
+                    if (sum > 5 && sum < 7 && numbers % 100 == 0)
                     {
                         Console.WriteLine($"1-dən 1000-ə qədər cüt ədədlərin içərisində rəqəmləri cəmi 5 ilə 7 arasında olan ən böyük ədəd: {numbers}");
                     }
