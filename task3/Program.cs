@@ -13,40 +13,41 @@ namespace task3
             int num;
             int temp;
             int sum;
-            bool state;
+            bool state1;
+            bool state2;
             for (num = 10; num < 100000; num++)
             {
-                state = false;
+                state1 = false;
                 sum = 0;
                 temp = num;
+                int last = temp % 10;
                 while (temp > 0)
                 {
-                    sum = sum + temp % 10;
-                    temp /= 10;
-                    if (temp % 10 == 5)
+                    if (temp % 10 != last)
                     {
-                        state = true;
+                        state1 = true;
                         break;
                     }
-
-                }
-                if (state == false)
-                {
-                    if (sum > 5)
+                    temp /= 10;
+                   }
+                   if (state1 == false)
+                   {
+                    state2 = false;
+                    sum = 0;
+                    temp = num;
+                    while (temp > 0)
                     {
-                        if (num % 10 == num / 10)
+                        sum = sum + temp % 10;
+                        temp /= 10;
+                        if (temp % 10 == 5)
                         {
-                            Console.WriteLine(num);
+                            state2 = true;
+                            break;
                         }
-                        if (num % 10 == num / 100 && num % 10 == num % 100 / 10)
-                        {
-                            Console.WriteLine(num);
-                        }
-                        if (num % 10 == num / 1000 && num % 10 == num / 100 % 10 && num % 10 == num % 100 / 10)
-                        {
-                            Console.WriteLine(num);
-                        }
-                        if (num % 10 == num / 10000 && num % 10 == num / 1000 % 10 && num % 10 == num % 1000 / 100 && num % 10 == num % 1000 / 10 % 10)
+                    }
+                    if (state2 == false)
+                    {
+                        if (sum > 5)
                         {
                             Console.WriteLine(num);
                         }
@@ -56,6 +57,10 @@ namespace task3
         }
     }
 }
+            
+        
+    
+
 
 
 
