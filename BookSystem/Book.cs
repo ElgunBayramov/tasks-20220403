@@ -12,11 +12,6 @@ namespace BookSystem
         public string AuthorName;
         public int PublishedDate;
         public int PageCount;
-        //public Book()
-        //{
-
-        //}
-
         public override string ToString()
         {
             return $"{AuthorName} {Name} {PublishedDate}";
