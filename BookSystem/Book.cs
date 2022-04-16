@@ -12,17 +12,21 @@ namespace BookSystem
         public string AuthorName;
         public int PublishedDate;
         public int PageCount;
+
         public override string ToString()
         {
-            return $"{AuthorName} {Name} {PublishedDate}";
+            return $"{AuthorName} {$"\"{Name}\""} {PublishedDate}";
 
         }
-        public void Book2()
+        public void Book1()
         {
-        Console.WriteLine($"Əsər: {Name}\n" +
-        $"Müəllif: {AuthorName}\n" +
-        $"Nəşr ili: {PublishedDate}\n" +
-        $"Səhifə sayı: {PageCount}\n");
+            if (PageCount > 10)
+            {
+                Console.WriteLine($"Əsər: {Name}\n" +
+                $"Müəllif: {AuthorName}\n" +
+                $"Nəşr ili: {PublishedDate}\n" +
+                $"Səhifə sayı: {PageCount}\n");
+            }
         }
     }
 }

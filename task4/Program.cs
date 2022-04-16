@@ -11,6 +11,7 @@ namespace task4
             int numbers;
             int temp;
             int sum;
+            int counter = 0;
             for(numbers= 1; numbers < 1000; numbers++)
             {
                 temp = numbers;
@@ -24,11 +25,14 @@ namespace task4
                     }
                     if (sum > 11)
                     {
-                        Console.WriteLine(numbers);
-
-                    }   
+                        counter++;
+                       if( counter == 11){
+                            break;
+                        }  
+                    }
                 }
-            }    
+            }
+            Console.WriteLine(numbers);
         }
     }
 }

@@ -12,9 +12,8 @@ namespace task5
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.WriteLine("Hər hansı bir ədəd daxil edin: ");
             int num=Convert.ToInt32(Console.ReadLine());
+            string num1=Convert.ToString(num);
             int temp, r;
-            int a = 1;
-            double newnum;
             int sum = 0;
             temp = num;
             while (num > 0)
@@ -25,8 +24,10 @@ namespace task5
             }
             if (temp == sum)
             {
-                newnum = double.Parse(a.ToString() + temp.ToString() + a.ToString());
-                Console.Write($"ədədin axırına və sonuna 1 rəqəmi artırdıqda alınan ədəd: {newnum}");
+
+                num1 = num1.Insert(0,"1");
+                num1 = num1.Insert(num1.Length, "1");
+                Console.WriteLine(num1);
             }
             else
                 Console.Write(temp);

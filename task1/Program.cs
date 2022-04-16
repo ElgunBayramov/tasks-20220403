@@ -9,27 +9,28 @@ namespace task1
             // 1 - 1000 qeder CUT ederlerin icerisinde
             // reqemleri cemi 5 ile 7 arasinda olan en boyuk eded hansidir?
             Console.OutputEncoding = System.Text.Encoding.Unicode;
-            int numbers;
-            int sum;
+            int number=0;
+            int sum=0;
             int temp;
-            for (numbers = 1; numbers <= 1000; numbers++)
+            for (int i = 1; i < 1000; i++)
             {
-                sum = 0;
-                temp = numbers;
-                if (temp % 2 == 0)
-                {
+                if (i % 2 == 0)
+                {                   
+                    temp = i;
                     while (temp > 0)
-                    {   
+                    {
                         sum = sum + temp % 10;
                         temp /= 10;
                     }
-                   
-                    if (sum > 5 && sum < 7 && numbers % 100 == 0)
+
+                    if (sum > 5 && sum < 7) 
                     {
-                        Console.WriteLine($"1-dən 1000-ə qədər cüt ədədlərin içərisində rəqəmləri cəmi 5 ilə 7 arasında olan ən böyük ədəd: {numbers}");
+                        number = i;
                     }
                 }
+                sum = 0;
             }
+            Console.WriteLine($"1-dən 1000-ə qədər cüt ədədlərin içərisində rəqəmləri cəmi 5 ilə 7 arasında olan ən böyük ədəd: {number}");
         }
     }
 }

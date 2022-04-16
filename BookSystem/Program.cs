@@ -36,7 +36,7 @@ namespace BookSystem
            
             Console.WriteLine(b1);
             Console.WriteLine("--------------------------------------------------");
-            b1.Book2();
+            b1.Book1();
         }
     }
 }
