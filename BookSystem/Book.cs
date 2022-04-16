@@ -27,6 +27,10 @@ namespace BookSystem
                 $"Nəşr ili: {PublishedDate}\n" +
                 $"Səhifə sayı: {PageCount}\n");
             }
+            else
+            {
+                Console.WriteLine("Səhifə sayı düzgün verilməyib.");
+            }
         }
     }
 }

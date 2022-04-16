@@ -32,7 +32,7 @@ namespace task4
                     }
                 }
             }
-            Console.WriteLine(numbers);
+            Console.WriteLine($"11-ci eded: {numbers}");
         }
     }
 }
